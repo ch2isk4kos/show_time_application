@@ -8,4 +8,14 @@
 
 4. create index action in movies_controller.rb
 
-5. 
+5. create routes in routes.rb
+
+6. add simple_form and bootstrap-sass to Gemfile
+
+7. bundle install
+
+8. restart the server
+
+9. configure simple_form and bootstrap-sass
+
+10. 
