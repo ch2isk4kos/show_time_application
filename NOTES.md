@@ -19,3 +19,5 @@
 9. configure simple_form and bootstrap-sass
 
 10. create actions in movies_controller.rb
+
+11. create show action and show view file
