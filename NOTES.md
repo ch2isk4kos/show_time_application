@@ -29,3 +29,5 @@
 14. add devise to Gemfile
 
 15. configure devise
+
+16. Add Navigation to application.html.erb
