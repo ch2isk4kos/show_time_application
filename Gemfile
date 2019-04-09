@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # Custom Gems
 gem 'simple_form', '~> 4.1'
 gem 'bootstrap-sass', '~> 3.4'
+gem 'devise', '~> 4.6'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

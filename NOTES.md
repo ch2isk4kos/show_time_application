@@ -25,3 +25,7 @@
 12. create edit, update and destroy actions in movies_controller.rb
 
 13. create edit view file
+
+14. add devise to Gemfile
+
+15. configure devise
