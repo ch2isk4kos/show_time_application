@@ -21,3 +21,7 @@
 10. create actions in movies_controller.rb
 
 11. create show action and show view file
+
+12. create edit, update and destroy actions in movies_controller.rb
+
+13. create edit view file
