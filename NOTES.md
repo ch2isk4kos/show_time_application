@@ -31,3 +31,9 @@
 15. configure devise
 
 16. Add Navigation to application.html.erb
+
+17. create Associations (User --< Movies) in models
+    - $ rails generate migration add_user_id_to_movies user_id:integer
+    - $ rake db:migrate
+
+18. revise movies_controller.rb #new && #create for current_user
