@@ -77,3 +77,15 @@
     - $ rake db:migrate
 
 31. display images on index page && show page
+
+32. create Review model
+    - $ rails generate model Review rating:integer comment:text
+    - $ rake db:migrate
+
+33. add user_id to Review model
+    - $ rails generate migration add_user_id_to_reviews user_id:integer
+    - $ rake db:migrate
+
+34. add movie_id to Review model
+    - $ rails generate migration add_movie_id_to_reviews movie_id:integer
+    - $ rake db:migrate

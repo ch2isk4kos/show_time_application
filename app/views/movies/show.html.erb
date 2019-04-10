@@ -1,16 +1,23 @@
+<div class="row">
+    <div class="col-md-4">
+        <%= image_tag @movie.movie_img.url(:movie_show), class: "play_show" %>
+    </div>
 
-<div class="col-md-10 col-md-1">
-    <h1><%= @movie.title %></h1>
-    <h5><%= @movie.category.name %></h5>
-    <h4><%= @movie.director %></h4>
-    <p><%= @movie.description %></p>
+    <div class="col-md-8">
+        <div class="play-info">
+            <h1 class="play-title"><%= @movie.title %></h1>
+            <h5 class="play-category"><%= @movie.category.name %></h5>
+            <h4 class="play-director"><span>directed by</span> <%= @movie.director %></h4>
+            <p class="play-desc"><%= @movie.description %></p>
+        </div>
+    </div>
 
     <div class="btn-group">
         <% if user_signed_in? %>
             <% if @movie.user_id == current_user.id %>
-                <%= link_to "Back", root_path, class: 'btn btn-default' %>
+                <%= link_to "Back", root_path, class: 'btn btn-default btn-custom' %>
                 <%= link_to "Edit", edit_movie_path, class: 'btn btn-primary' %>
-                <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are You Sure?" }, class: 'btn btn-danger' %>
+                <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are You Sure?" }, class: 'btn btn-danger btn-custom' %>
             <% end%>
         <% end%>
     </div>
