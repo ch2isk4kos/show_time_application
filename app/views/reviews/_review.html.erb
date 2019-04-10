@@ -7,7 +7,6 @@
             <div class="links btn-group">
                 <%=  link_to "Edit", edit_movie_review_path(review.movie, review), class: 'btn btn-custom'%>
                 <%=  link_to "Delete", movie_review_path(review.movie, review), method: :delete, data: {confirm: "Are You Sure?"}, class: 'btn btn-custom'%>
-                <%=  %>
             </div>
         <% end %>
     <% end %>
