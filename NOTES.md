@@ -75,3 +75,5 @@
 30. add movie_img column to movies table
     - $ rails generate paperclip Movie movie_img
     - $ rake db:migrate
+
+31. display images on index page && show page
