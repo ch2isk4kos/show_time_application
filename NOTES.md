@@ -89,3 +89,12 @@
 34. add movie_id to Review model
     - $ rails generate migration add_movie_id_to_reviews movie_id:integer
     - $ rake db:migrate
+
+35. create Review Associations
+
+36. create Review routes
+
+37. create reviews_controller.rb
+    - $ rails generate controller Reviews
+
+38. add #new and #create review actions
