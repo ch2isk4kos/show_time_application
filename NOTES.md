@@ -1,3 +1,5 @@
+#Play-By-Play
+
 1. $ rails new showtime
 
 2. $ rails generate model Movie title:string description:text director:string
@@ -51,3 +53,11 @@
 22. add category Associations (User --< Movies >-- Category)
 
 23. update #new, #create, #edit, #update && #movie_params actions in movies_controller.rb for category functionality
+
+24. add select_form to views/movies/_form.html.erb __
+
+25. update category selector in views/movies/edit.html.erb
+
+26. add bootstrap dropdown to views/movies/index.html.erb
+
+27. 

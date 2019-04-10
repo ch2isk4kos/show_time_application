@@ -3,7 +3,14 @@ class MoviesController < ApplicationController
     before_action :find_movie, only: [:show, :edit, :update, :destroy]
 
     def index
-        @movies = Movie.all.order("created_at DESC")
+        # @movies = Movie.all.order("created_at DESC")
+
+        if params[:category].blank?
+            @movies = Movie.all.order("created_at DESC")
+        else
+            @category_id = Category.find_by(name: params[:category]).id
+            @movies = Movie.where(category_id: @category_id.order("created_at DESC"))
+        end
     end
 
     def show
@@ -34,7 +41,7 @@ class MoviesController < ApplicationController
 
     def update
         @movie.category_id = params[:category_id]
-        
+
         if @movie.update(movie_params)
             redirect_to movie_path(@movie)
         else
