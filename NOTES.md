@@ -38,4 +38,16 @@
 
 18. revise movies_controller.rb #new && #create for current_user
 
-19. Authenticate editing and deleting in views/movies/show.html.erb
+19. Authenticate users from editing and deleting in views/movies/show.html.erb
+
+20. create Category model
+    - $ rails generate model Category name:string
+    - $ rake db:migrate
+
+21. add category_id column to movies table
+    - $ rails generate migration add_category_id_to_movies category_id:integer
+    - $ rake db:migrate
+
+22. add category Associations (User --< Movies >-- Category)
+
+23. update #new, #create, #edit, #update && #movie_params actions in movies_controller.rb for category functionality
