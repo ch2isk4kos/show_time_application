@@ -37,3 +37,5 @@
     - $ rake db:migrate
 
 18. revise movies_controller.rb #new && #create for current_user
+
+19. Authenticate editing and deleting in views/movies/show.html.erb

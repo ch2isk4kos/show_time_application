@@ -3,7 +3,15 @@
     <h1><%= @movie.title %></h1>
     <h4><%= @movie.director %></h4>
     <p><%= @movie.description %></p>
-    <%= link_to "Back", root_path, class: 'btn btn-default' %>
-    <%= link_to "Edit", edit_movie_path, class: 'btn btn-primary' %>
-    <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are You Sure?" }, class: 'btn btn-danger' %>
+
+    <div class="btn-group">
+        <% if user_signed_in? %>
+            <% if @movie.user_id == current_user.id %>
+                <%= link_to "Back", root_path, class: 'btn btn-default' %>
+                <%= link_to "Edit", edit_movie_path, class: 'btn btn-primary' %>
+                <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are You Sure?" }, class: 'btn btn-danger' %>
+            <% end%>
+        <% end%>
+    </div>
+
 </div>
