@@ -1,7 +1,14 @@
 <div class="col-md-4 col-md-offset-4">
-    <% @movies.each do |movie| %>
-        <h2><%= link_to movie.title, movie_path(movie) %></h2>
+    <h1 class="current-category"><%= params[:category] %></h1>
+
+    <% if @movies.count == 0 %>
+        <h3>There Are No Movies in This Category</h3>
+    <% else %>
+        <% @movies.each do |movie| %>
+            <h2><%= link_to movie.title, movie_path(movie) %></h2>
+        <% end %>
     <% end %>
+
     <br>
     <%= link_to 'Add Movie', new_movie_path %>
 </div>

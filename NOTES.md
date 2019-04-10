@@ -58,6 +58,10 @@
 
 25. update category selector in views/movies/edit.html.erb
 
-26. add bootstrap dropdown to views/movies/index.html.erb
+#26. add bootstrap dropdown to views/movies/index.html.erb
 
-27. 
+27. add paperclip to Gemfile
+
+28. $ bundle install
+
+29. configure paperclip

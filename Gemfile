@@ -17,9 +17,10 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # Custom Gems
-gem 'simple_form', '~> 4.1'
-gem 'bootstrap-sass', '~> 3.4'
-gem 'devise', '~> 4.6'
+gem 'simple_form', '~> 4.1'     # forms
+gem 'bootstrap-sass', '~> 3.4'  # bootstrap styling
+gem 'devise', '~> 4.6'          # user authentication
+gem 'paperclip', '~> 6.1'       # image uploading
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
