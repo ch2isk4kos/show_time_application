@@ -2,6 +2,7 @@
     <%= f.input :title, label: "Movie Title" %>
     <%= f.input :description %>
     <%= f.input :director %>
+    <%= f.file_field :movie_img %>
     <%= select_tag(:category_id, options_for_select(@categories), prompt: "Select Category") %>
     <%= f.button :submit, class: 'btn btn-info' %>
 <% end %>

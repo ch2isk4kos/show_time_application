@@ -65,3 +65,13 @@
 28. $ bundle install
 
 29. configure paperclip
+    - add to models/movie.rb
+        * has_attached_file :movie_img, styles: { movie_index: "250x300>", movie_show: "325x475>" }, default_url: "/images/:style/missing.png"
+
+        * validates_attachment_content_type :movie_img, content_type: /\Aimage\/.asterisk\z/
+    - add to config/environment/development.rb
+        * Paperclip.options[:command_path] = "/usr/local/bin/"
+
+30. add movie_img column to movies table
+    - $ rails generate paperclip Movie movie_img
+    - $ rake db:migrate
