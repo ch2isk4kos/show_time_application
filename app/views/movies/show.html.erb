@@ -11,15 +11,26 @@
             <p class="play-desc"><%= @movie.description %></p>
         </div>
     </div>
+</div>
 
-    <div class="btn-group">
-        <% if user_signed_in? %>
-            <% if @movie.user_id == current_user.id %>
-                <%= link_to "Back", root_path, class: 'btn btn-default btn-custom' %>
-                <%= link_to "Edit", edit_movie_path, class: 'btn btn-primary' %>
-                <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are You Sure?" }, class: 'btn btn-danger btn-custom' %>
-            <% end%>
-        <% end%>
+<div class="row">
+    <div class="col-md-12">
+        <div class="reviews">
+            <h1>Reviews</h1>
+            <%= render @movie.reviews %>
+            <div class="">
+                <%= link_to 'Add Review', new_movie_review_path(@movie), class: 'btn-custom' %>
+            </div>
+        </div>
     </div>
+</div>
 
+<div class="btn-group">
+    <% if user_signed_in? %>
+        <% if @movie.user_id == current_user.id %>
+            <%= link_to "Back", root_path, class: 'btn btn-default btn-custom' %>
+            <%= link_to "Edit", edit_movie_path, class: 'btn btn-primary' %>
+            <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are You Sure?" }, class: 'btn btn-danger btn-custom' %>
+        <% end%>
+    <% end%>
 </div>

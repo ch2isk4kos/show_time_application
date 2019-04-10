@@ -93,8 +93,11 @@
 35. create Review Associations
 
 36. create Review routes
+    - nest resources :reviews inside of resources :movies do
 
 37. create reviews_controller.rb
     - $ rails generate controller Reviews
 
-38. add #new and #create review actions
+38. add #new and #create actions in reviews_controller.rb
+
+39. create Review view files
