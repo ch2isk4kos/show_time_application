@@ -106,6 +106,6 @@
 
 41. add edit and delete functionality in movies show page
 
-42. configure jQuery raty
+#42. configure jQuery raty
 
-43. 
+43. add average reviews on the show page
