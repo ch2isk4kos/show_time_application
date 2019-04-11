@@ -101,3 +101,11 @@
 38. add #new and #create actions in reviews_controller.rb
 
 39. create Review view files
+
+40. add #edit, #update && #destroy in reviews_controller.rb
+
+41. add edit and delete functionality in movies show page
+
+42. configure jQuery raty
+
+43. 

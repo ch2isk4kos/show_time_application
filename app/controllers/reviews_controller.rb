@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
 
     before_action :find_movie
     before_action :find_review, only: [:edit, :update, :destroy]
+    before_action :authenticate_user!, only: [:new, :edit]
 
     def new
         @review = Review.new
@@ -49,6 +50,4 @@ class ReviewsController < ApplicationController
     def review_params
         params.require(:review).permit(:rating, :comment)
     end
-
-
 end
